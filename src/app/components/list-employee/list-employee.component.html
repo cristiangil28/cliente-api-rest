@@ -1,0 +1,28 @@
+<div class="col">
+    <h2>Empleados</h2>
+    <button class="btn btn-primary" (click)="addEmployee()">Agregar Empleado</button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="hidden">Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td class="hidden">{{ employee.id }}</td>
+          <td>{{ employee.nombre }}</td>
+          <td>{{ employee.apellidos }}</td>
+          <td>{{ employee.email }}</td>
+          <td>
+            <button class="btn btn-success" (click)="addActivity(employee)">
+              Crear Actividad
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

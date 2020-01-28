@@ -1,0 +1,13 @@
+<div class="col">
+    <h2 class="text-center">Agregar Actividad</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="Descripcion">Descripción:</label>
+        <input formControlName="description" placeholder="Descripción" name="description" class="form-control" id="description" required>
+      </div>
+      <p>{{datoEmployee}}</p>
+      <button class="btn btn-success">Aceptar</button>
+      <button class="btn btn-primary" routerLink="list-activity">Regresar</button>
+    </form>
+  </div>

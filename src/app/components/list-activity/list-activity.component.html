@@ -1,0 +1,30 @@
+<div class="col">
+    <h2>Actividades</h2>
+    <button class="btn btn-primary" (click)="addActivity()">Agregar Actividad</button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="hidden">Id</th>
+          <th>Descripción</th>
+          <th>Nombre Empleado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of activities">
+          <td class="hidden">{{ activity.id }}</td>
+          <td>{{ activity.description }}</td>
+          <td>{{ activity.empleado.nombre }}</td>
+          <td>
+            <button class="btn btn-success" (click)="editEmployee(employee)">
+              Editar
+            </button>
+            <button class="btn btn-danger" (click)="deleteEmployee(employee)">
+              Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
